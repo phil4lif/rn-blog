@@ -17,8 +17,8 @@ const App = createAppContainer(navigator);
 
 export default () => {
   return (
-    <Blog>
+    <Provider>
       <App />
-    </Blog>
+    </Provider>
   )
 }
