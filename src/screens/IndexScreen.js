@@ -4,12 +4,10 @@ import { Context } from '../context/BlogContext';
 import { Feather } from '@expo/vector-icons'
 
 const IndexScreen = ({ navigation }) => {
-    const { state, addBlogPost, deleteBlogPost } = useContext(Context);
+    const { state, deleteBlogPost } = useContext(Context);
     return (
         <View>
-            <Button title="add post"
-                onPress={addBlogPost}
-            />
+
             <FlatList
                 data={state}
                 keyExtractor={(blogPost) => blogPost.title}

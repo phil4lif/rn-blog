@@ -6,3 +6,10 @@
       </TouchableOpacity>
     ),
   };
+    return {
+    headerRight: () => (
+      <TouchableOpacity onPress={() => navigation.navigate('Edit')}>
+        <EvilIcons name="pencil" size={35} />
+      </TouchableOpacity>
+    ),
+  };
