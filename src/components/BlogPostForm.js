@@ -8,9 +8,9 @@ import {
     TouchableOpacity
 } from 'react-native';
 
-const BlogPostForm = () => {
-    const [title, setTitle] = useState('');
-    const [content, setContent] = useState('');
+const BlogPostForm = ({ onSubmit, initialValues}) => {
+    const [title, setTitle] = useState(initialValues.title);
+    const [content, setContent] = useState(initialValues.content);
     return (
         <View>
             <Text style={styles.label}>Blog Title</Text>
@@ -26,6 +26,7 @@ const BlogPostForm = () => {
             onChangeText={text => setContent(text)}
             />
             <Button 
+            onPress={() => onSubmit(title, content)}
             title="Save Blog Post"
             />
         </View>
